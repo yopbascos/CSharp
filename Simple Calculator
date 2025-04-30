@@ -1,0 +1,101 @@
+using System;
+namespace CSharpProject
+{
+    class Program
+    {
+        static void addition()
+        {
+            double num_one, num_two, answer;
+            Console.WriteLine("You have chosen addition");
+
+            Console.Write("Please Input the First Number: ");
+            num_one = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Please Input the Second Number: ");
+            num_two = Convert.ToDouble(Console.ReadLine());
+
+            answer = num_one + num_two;
+
+            Console.WriteLine("The Answer is: " + answer);
+        }
+
+        static void subtraction()
+        {
+            double num_one, num_two, answer;
+            Console.WriteLine("You have chosen subtraction");
+
+            Console.Write("Please Input the First Number: ");
+            num_one = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Please Input the Second Number: ");
+            num_two = Convert.ToDouble(Console.ReadLine());
+
+            answer = num_one - num_two;
+
+            Console.WriteLine("The Answer is: " + answer);
+        }
+
+        static void multiplication()
+        {
+            double num_one, num_two, answer;
+            Console.WriteLine("You have chosen multiplication");
+
+            Console.Write("Please Input the First Number: ");
+            num_one = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Please Input the Second Number: ");
+            num_two = Convert.ToDouble(Console.ReadLine());
+
+            answer = num_one * num_two;
+
+            Console.WriteLine("The Answer is: " + answer);
+        }
+
+        static void division()
+        {
+            double num_one, num_two, answer;
+            Console.WriteLine("You have chosen division");
+
+            Console.Write("Please Input the First Number: ");
+            num_one = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Please Input the Second Number: ");
+            num_two = Convert.ToDouble(Console.ReadLine());
+
+            answer = num_one / num_two;
+
+            Console.WriteLine("The Answer is: " + answer);
+        }
+
+        static void menu()
+        {
+            char option;
+            Console.WriteLine("What Operation" +
+                "\n [1] Addition" +
+                "\n [2] Subtraction" +
+                "\n [3] Multiplication" +
+                "\n [4] Division");
+            Console.Write("Enter your choice: ");
+            option = Convert.ToChar(Console.ReadLine());
+
+            switch (option)
+            {
+                case '1':
+                    addition(); break;
+                case '2':
+                    subtraction(); break;
+                case '3':
+                    multiplication(); break;
+                case '4':
+                    division(); break;
+            }
+
+        }
+
+        static void Main(string[] args)
+        {
+            menu();
+
+        }
+    }
+}
