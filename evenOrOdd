@@ -1,0 +1,33 @@
+using System;
+namespace CSharpProject
+{
+    class Program
+    {
+        static void evenOrOdd()
+        {
+            string end;
+            do
+            {
+                Console.Write("Please Input a Number: ");
+                int number = Convert.ToInt32(Console.ReadLine());
+            
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine("The Number is Even");
+                }
+                else if (number % 2 != 0)
+                {
+                    Console.WriteLine("The Number is Odd");
+                }
+                Console.Write("Would you like to continue (Y/n)");
+                end = Console.ReadLine();
+
+            } while (end == "y" | end == "Y");
+        }
+
+        static void Main(string[] args)
+        {
+            evenOrOdd();
+        }
+    }
+}
