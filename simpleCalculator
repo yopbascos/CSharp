@@ -1,101 +1,58 @@
-using System;
-namespace CSharpProject
+namespace ConsoleApp1
 {
     class Program
     {
+        static double numOne;
+        static double numTwo;
+        static double ans;
         static void addition()
         {
-            double num_one, num_two, answer;
-            Console.WriteLine("You have chosen addition");
-
-            Console.Write("Please Input the First Number: ");
-            num_one = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Please Input the Second Number: ");
-            num_two = Convert.ToDouble(Console.ReadLine());
-
-            answer = num_one + num_two;
-
-            Console.WriteLine("The Answer is: " + answer);
+            Console.Write("Input the First Number: ");
+            numOne = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the Second Number: ");
+            numTwo = Convert.ToInt32(Console.ReadLine());
+            
+            ans = numOne + numTwo;
+            Console.WriteLine("Sum: " + ans);
         }
 
         static void subtraction()
         {
-            double num_one, num_two, answer;
-            Console.WriteLine("You have chosen subtraction");
-
-            Console.Write("Please Input the First Number: ");
-            num_one = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Please Input the Second Number: ");
-            num_two = Convert.ToDouble(Console.ReadLine());
-
-            answer = num_one - num_two;
-
-            Console.WriteLine("The Answer is: " + answer);
-        }
-
-        static void multiplication()
-        {
-            double num_one, num_two, answer;
-            Console.WriteLine("You have chosen multiplication");
-
-            Console.Write("Please Input the First Number: ");
-            num_one = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Please Input the Second Number: ");
-            num_two = Convert.ToDouble(Console.ReadLine());
-
-            answer = num_one * num_two;
-
-            Console.WriteLine("The Answer is: " + answer);
-        }
-
-        static void division()
-        {
-            double num_one, num_two, answer;
-            Console.WriteLine("You have chosen division");
-
-            Console.Write("Please Input the First Number: ");
-            num_one = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Please Input the Second Number: ");
-            num_two = Convert.ToDouble(Console.ReadLine());
-
-            answer = num_one / num_two;
-
-            Console.WriteLine("The Answer is: " + answer);
+            Console.Write("Input the First Number: ");
+            numOne = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the Second Number: ");
+            numTwo = Convert.ToInt32(Console.ReadLine());
+            
+            ans = numOne - numTwo;
+            Console.WriteLine("Difference: " + ans);
         }
 
         static void menu()
         {
-            char option;
-            Console.WriteLine("What Operation" +
-                "\n [1] Addition" +
-                "\n [2] Subtraction" +
-                "\n [3] Multiplication" +
-                "\n [4] Division");
-            Console.Write("Enter your choice: ");
-            option = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("Choose an Option\n" +
+                              "[1] - Addition\n" +
+                              "[2] - Subtraction\n");
+            Console.Write("Choose an Option: ");
+            string choice = Console.ReadLine();
 
-            switch (option)
+            switch (choice)
             {
-                case '1':
-                    addition(); break;
-                case '2':
-                    subtraction(); break;
-                case '3':
-                    multiplication(); break;
-                case '4':
-                    division(); break;
+                case "1":
+                    addition();
+                    break;
+                case "2":
+                    subtraction();
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
             }
-
         }
-
-        static void Main(string[] args)
+        
+        public static void Main(string[] args)
         {
             menu();
-
         }
     }
+
 }
